@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>How to make equal height columns using jQuery</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style type="text/css">
+    .inner_column{
+      background-color: #ccc;
+      padding: 16px;
+      border: 1px solid #333;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1 class="text-center">How to make equal height columns using jQuery</h1>
+  <br>
+  <br>
+  <div class="row">
+    <div class="col-md-3 col-sm-6">
+      <div class="inner_column">
+      <h2>Column1</h2>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultricies gravida erat in convallis. Ut malesuada ipsum vel orci interdum, ut luctus ipsum efficitur. Morbi elementum, nisi tempor malesuada ultricies, urna ligula vehicula velit, eget posuere tortor eros hendrerit tortor. Cras gravida lectus nisl, sed lacinia urna malesuada sed. Proin id elit ac tortor tempus elementum. Vivamus aliquam rutrum ipsum eu euismod. Pellentesque vitae congue ipsum. Morbi a tristique augue. Donec quis arcu eget lacus ullamcorper bibendum. Nam quis ligula id tortor blandit ornare. Nullam congue, neque quis tristique pretium, nulla metus mollis nunc, sed venenatis arcu ligula sit amet lacus. Integer vulputate ante eget enim eleifend vestibulum. Ut vel sodales arcu, quis dictum risus. Nullam pharetra pharetra massa eu posuere.
+
+      Aliquam luctus ultricies ultricies. Nam sed eleifend mi. Maecenas vehicula ligula eget nulla vestibulum laoreet. Nulla vitae ligula tortor. Vivamus ullamcorper laoreet felis a pellentesque. Pellentesque blandit magna a est finibus convallis. Nullam suscipit ut ligula in viverra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In hac habitasse platea dictumst. Cras pellentesque risus eu massa vestibulum imperdiet. Integer laoreet sem ut accumsan aliquam. Suspendisse at placerat dolor.
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+      <div class="inner_column">
+        <h2>Column2</h2>
+        Aliquam luctus ultricies ultricies. Nam sed eleifend mi. Maecenas vehicula ligula eget nulla vestibulum laoreet. Nulla vitae ligula tortor. Vivamus ullamcorper laoreet felis a pellentesque. Pellentesque blandit magna a est finibus convallis. Nullam suscipit ut ligula in viverra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In hac habitasse platea dictumst. Cras pellentesque risus eu massa vestibulum imperdiet. Integer laoreet sem ut accumsan aliquam. Suspendisse at placerat dolor.
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+      <div class="inner_column">
+        <h2>Column3</h2>
+        Aliquam luctus ultricies ultricies. Nam sed eleifend mi. Maecenas vehicula ligula eget nulla vestibulum laoreet. Nulla vitae ligula tortor. Vivamus ullamcorper laoreet felis a pellentesque. Pellentesque blandit magna a est finibus convallis. Nullam suscipit ut ligula in viverra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In hac habitasse platea dictumst. Cras pellentesque risus eu massa vestibulum imperdiet. Integer laoreet sem ut accumsan aliquam. Suspendisse at placerat dolor.
+      </div>
+    </div>
+    <div class="col-md-3 col-md-6">
+      <div class="inner_column">
+      <h2>Column4</h2>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultricies gravida erat in convallis. Ut malesuada ipsum vel orci interdum, ut luctus ipsum efficitur. Morbi elementum, nisi tempor malesuada ultricies, urna ligula vehicula velit, eget posuere tortor eros hendrerit tortor. Cras gravida lectus nisl, sed lacinia urna malesuada sed. Proin id elit ac tortor tempus elementum. Vivamus aliquam rutrum ipsum eu euismod. Pellentesque vitae congue ipsum. Morbi a tristique augue. Donec quis arcu eget lacus ullamcorper bibendum. Nam quis ligula id tortor blandit ornare. Nullam congue, neque quis tristique pretium, nulla metus mollis nunc, sed venenatis arcu ligula sit amet lacus. Integer vulputate ante eget enim eleifend vestibulum. Ut vel sodales arcu, quis dictum risus. Nullam pharetra pharetra massa eu posuere.
+
+      Aliquam luctus ultricies ultricies. Nam sed eleifend mi. Maecenas vehicula ligula eget nulla vestibulum laoreet. Nulla vitae ligula tortor. Vivamus ullamcorper laoreet felis a pellentesque. Pellentesque blandit magna a est finibus convallis. Nullam suscipit ut ligula in viverra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In hac habitasse platea dictumst. Cras pellentesque risus eu massa vestibulum imperdiet. Integer laoreet sem ut accumsan aliquam. Suspendisse at placerat dolor.
+      </div>
+    </div>
+  </div>
+</div>
+    
+</body>
+</html>
+<script type="text/javascript">
+  $(document).ready(function(){
+    var heights=[];
+    $('.inner_column').each(function(){
+        heights.push($(this).height());
+    });
+
+    var maxHeight = Math.max.apply(null, heights);
+    $('.inner_column').height(maxHeight);
+  });
+</script>
