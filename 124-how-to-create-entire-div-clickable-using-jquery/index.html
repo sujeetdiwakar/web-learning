@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>How to make Whole Div Clickable using jquery</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+ <style>
+ .clickable
+ {
+  border:1px solid #ccc;
+  cursor:pointer;
+  padding-top:12px;
+  padding-bottom:12px;
+ }
+ </style>
+</head>
+<body>
+ <div class="container">
+  <br />
+  <h3 align="center">How to make Whole Div Clickable using jquery</h3>
+  <br />
+  
+  <div class="row">
+   <div class="col-md-4"></div>
+   <div class="col-md-4 clickable">
+    <img src="image.jpg" class="img-thumbnail" />
+    <h3>Exporting Data into Multiple Excel sheets in PHP</h3>
+    <p>If you are working with large amount of data and mainly we have use Excel and CSV file format for export data in web development. So, in this post we have describe how to split huge amount of mysql datable data and export into multiple excel or csv file by using PHPExcel library in PHP.</p>
+    <a href="https://www.example.com">Read more</a>
+   </div>
+   <div class="col-md-4"></div>
+  </div>
+  
+ </div>
+</body>
+</html>
+<script>
+$(document).ready(function(){
+ 
+ $('.clickable').click(function(){
+  window.location = $(this).find("a").attr("href");
+ });
+ 
+});
+</script>
