@@ -20,7 +20,7 @@ $result = mysqli_query($connect, $query);
    <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
-           <a class="navbar-brand" href="#">Webslesson Tutorial</a>
+           <a class="navbar-brand" href="#">Web Learning</a>
         </div>
         <ul class="nav navbar-nav">
       <?php
